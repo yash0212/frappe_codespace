@@ -1,0 +1,96 @@
+2024-07-31 13:11:44,649 DEBUG cd frappe-bench && python3 -m venv env
+2024-07-31 13:12:05,033 DEBUG cd frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-07-31 13:12:33,004 DEBUG cd frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet wheel
+2024-07-31 13:12:41,397 LOG Getting frappe
+2024-07-31 13:12:41,399 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2024-07-31 13:12:49,006 LOG Installing frappe
+2024-07-31 13:12:49,008 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/frappe-bench/apps/frappe 
+2024-07-31 13:14:57,939 DEBUG cd /workspace/frappe-bench/apps/frappe && yarn install --check-files
+2024-07-31 13:15:25,351 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-07-31 13:15:25,352 DEBUG cd frappe-bench && bench build
+2024-07-31 13:15:25,690 INFO /home/frappe/.local/bin/bench build
+2024-07-31 13:15:54,742 LOG setting up backups
+2024-07-31 13:15:54,847 LOG backups were set up
+2024-07-31 13:15:54,847 INFO Bench frappe-bench initialized
+2024-07-31 13:15:55,380 INFO /home/frappe/.local/bin/bench set-mariadb-host mariadb
+2024-07-31 13:15:55,858 INFO /home/frappe/.local/bin/bench set-redis-cache-host redis-cache:6379
+2024-07-31 13:15:56,350 INFO /home/frappe/.local/bin/bench set-redis-queue-host redis-queue:6379
+2024-07-31 13:15:56,772 INFO /home/frappe/.local/bin/bench set-redis-socketio-host redis-socketio:6379
+2024-07-31 13:15:57,197 INFO /home/frappe/.local/bin/bench new-site dev.localhost --mariadb-root-password 123 --admin-password admin --no-mariadb-socket
+2024-07-31 13:16:52,516 INFO /home/frappe/.local/bin/bench --site dev.localhost set-config developer_mode 1
+2024-07-31 13:16:52,998 INFO /home/frappe/.local/bin/bench --site dev.localhost clear-cache
+2024-07-31 13:16:54,042 INFO /home/frappe/.local/bin/bench use dev.localhost
+2024-07-31 13:18:43,513 INFO /home/frappe/.local/bin/bench start
+2024-07-31 13:18:44,244 INFO /home/frappe/.local/bin/bench worker
+2024-07-31 13:18:44,290 INFO /home/frappe/.local/bin/bench watch
+2024-07-31 13:18:44,394 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-07-31 13:18:44,432 INFO /home/frappe/.local/bin/bench schedule
+2024-07-31 13:25:04,496 INFO /home/frappe/.local/bin/bench start
+2024-07-31 13:25:05,258 INFO /home/frappe/.local/bin/bench schedule
+2024-07-31 13:25:05,316 INFO /home/frappe/.local/bin/bench watch
+2024-07-31 13:25:05,353 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-07-31 13:25:05,376 INFO /home/frappe/.local/bin/bench worker
+2024-08-01 05:34:25,886 INFO /home/frappe/.local/bin/bench update
+2024-08-01 05:34:27,201 WARNING shallow_clone is set in your bench config.
+However without passing the --reset flag, your repositories will be unshallowed.
+To avoid this, cancel this operation and run `bench update --reset`.
+
+Consider the consequences of `git reset --hard` on your apps before you run that.
+To avoid seeing this warning, set shallow_clone to false in your common_site_config.json
+		
+2024-08-01 05:34:40,165 DEBUG cd /workspace/frappe-bench/apps/frappe && git fetch upstream --unshallow
+2024-08-01 05:35:22,767 LOG pulling frappe
+2024-08-01 05:35:22,767 DEBUG cd /workspace/frappe-bench/apps/frappe && git pull  upstream develop
+2024-08-01 05:35:23,378 DEBUG cd /workspace/frappe-bench/apps/frappe && find . -name "*.pyc" -delete
+2024-08-01 05:35:23,551 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-08-01 05:35:25,607 LOG Installing frappe
+2024-08-01 05:35:25,607 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/frappe-bench/apps/frappe 
+2024-08-01 05:35:28,345 DEBUG cd /workspace/frappe-bench/apps/frappe && yarn install --check-files
+2024-08-01 05:36:26,541 INFO /home/frappe/.local/bin/bench start
+2024-08-01 05:36:27,306 INFO /home/frappe/.local/bin/bench schedule
+2024-08-01 05:36:27,562 INFO /home/frappe/.local/bin/bench watch
+2024-08-01 05:36:27,590 INFO /home/frappe/.local/bin/bench worker
+2024-08-01 05:36:27,623 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-08-01 05:41:38,349 INFO /home/frappe/.local/bin/bench get-app https://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@github.com/Kalvi-Education/frappe-krp.git
+2024-08-01 05:41:38,357 LOG Getting frappe-krp
+2024-08-01 05:41:38,357 DEBUG cd ./apps && git clone https://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@github.com/Kalvi-Education/frappe-krp.git  --depth 1 --origin upstream
+2024-08-01 05:41:39,616 LOG Installing krp
+2024-08-01 05:41:39,617 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/frappe-bench/apps/krp 
+2024-08-01 05:41:41,811 DEBUG bench build --app krp
+2024-08-01 05:41:41,999 INFO /home/frappe/.local/bin/bench build --app krp
+2024-08-01 05:41:45,517 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-01 05:41:53,288 INFO /home/frappe/.local/bin/bench install-app krp
+2024-08-01 05:42:09,526 INFO /home/frappe/.local/bin/bench start
+2024-08-01 05:42:10,261 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-08-01 05:42:10,289 INFO /home/frappe/.local/bin/bench watch
+2024-08-01 05:42:10,501 INFO /home/frappe/.local/bin/bench schedule
+2024-08-01 05:42:10,539 INFO /home/frappe/.local/bin/bench worker
+2024-08-01 05:51:32,055 INFO /home/frappe/.local/bin/bench restart
+2024-08-01 05:51:32,065 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-01 05:51:37,970 INFO /home/frappe/.local/bin/bench update
+2024-08-01 05:51:39,467 WARNING shallow_clone is set in your bench config.
+However without passing the --reset flag, your repositories will be unshallowed.
+To avoid this, cancel this operation and run `bench update --reset`.
+
+Consider the consequences of `git reset --hard` on your apps before you run that.
+To avoid seeing this warning, set shallow_clone to false in your common_site_config.json
+		
+2024-08-01 05:51:50,450 DEBUG cd /workspace/frappe-bench/apps/frappe && git fetch upstream --unshallow
+2024-08-01 05:52:37,555 LOG pulling frappe
+2024-08-01 05:52:37,556 DEBUG cd /workspace/frappe-bench/apps/frappe && git pull  upstream develop
+2024-08-01 05:52:38,124 DEBUG cd /workspace/frappe-bench/apps/frappe && find . -name "*.pyc" -delete
+2024-08-01 05:52:38,325 DEBUG cd /workspace/frappe-bench/apps/krp && git fetch upstream --unshallow
+2024-08-01 05:52:39,493 LOG pulling krp
+2024-08-01 05:52:39,493 DEBUG cd /workspace/frappe-bench/apps/krp && git pull  upstream main
+2024-08-01 05:52:40,352 DEBUG cd /workspace/frappe-bench/apps/krp && find . -name "*.pyc" -delete
+2024-08-01 05:52:40,356 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2024-08-01 05:52:42,389 LOG Installing frappe
+2024-08-01 05:52:42,390 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/frappe-bench/apps/frappe 
+2024-08-01 05:52:46,227 DEBUG cd /workspace/frappe-bench/apps/frappe && yarn install --check-files
+2024-08-01 05:52:49,209 LOG Installing krp
+2024-08-01 05:52:49,210 DEBUG cd /workspace/frappe-bench && /workspace/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /workspace/frappe-bench/apps/krp 
+2024-08-01 05:53:31,748 INFO /home/frappe/.local/bin/bench start
+2024-08-01 05:53:32,627 INFO /home/frappe/.local/bin/bench watch
+2024-08-01 05:53:32,635 INFO /home/frappe/.local/bin/bench schedule
+2024-08-01 05:53:32,684 INFO /home/frappe/.local/bin/bench serve --port 8000
+2024-08-01 05:53:32,818 INFO /home/frappe/.local/bin/bench worker
